@@ -5,6 +5,8 @@ node_modules/
 .next/
 dist/
 build/
+out/
+tsconfig.tsbuildinfo
 .env
 .env.*
 !.env.example
