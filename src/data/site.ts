@@ -2,6 +2,11 @@ export const companyName = "智加知识产权";
 export const fullCompanyName = "深圳市智加知识产权代理有限公司";
 export const phoneNumber = "18025488636";
 export const phoneHref = `tel:${phoneNumber}`;
+export const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+export function assetPath(path: string) {
+  return `${publicBasePath}${path}`;
+}
 
 export const navItems = [
   { label: "首页", href: "/" },
@@ -32,11 +37,11 @@ export const publicRiskNotes = [
 ] as const;
 
 export const imageAssets = {
-  hero: "/images/luxury-hero.png",
-  globalIp: "/images/hero-global-ip.png",
-  consulting: "/images/team-consulting.png",
-  certificatesGlobal: "/images/certificates-global.png",
-  patent: "/images/patent-copyright.png",
-  overseas: "/images/overseas-company.png",
-  honor: "/images/honor-certificates.png"
+  hero: assetPath("/images/luxury-hero.png"),
+  globalIp: assetPath("/images/hero-global-ip.png"),
+  consulting: assetPath("/images/team-consulting.png"),
+  certificatesGlobal: assetPath("/images/certificates-global.png"),
+  patent: assetPath("/images/patent-copyright.png"),
+  overseas: assetPath("/images/overseas-company.png"),
+  honor: assetPath("/images/honor-certificates.png")
 } as const;

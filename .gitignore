@@ -1,5 +1,6 @@
 .playwright-cli/
 .superpowers/
+.logs/
 output/
 node_modules/
 .next/

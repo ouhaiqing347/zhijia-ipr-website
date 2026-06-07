@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
   basePath: isGithubPagesBuild ? `/${repositoryName}` : undefined,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isGithubPagesBuild ? `/${repositoryName}` : ""
+  },
   images: {
     unoptimized: true,
     formats: ["image/avif", "image/webp"]
